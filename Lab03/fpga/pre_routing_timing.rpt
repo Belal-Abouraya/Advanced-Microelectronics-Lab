@@ -1,0 +1,41 @@
+
+7. Executing STA pass (static timing analysis).
+Warning: Module 'CARRY4' has no timing arcs!
+Latest arrival time in 'nr_divider_18bit_pipelined' is 3841:
+    3841 (<unknown>)
+Warning: Critical-path does not terminate in a recognised endpoint.
+           $auto$alumacc.cc:495:replace_alu$1256.BB [18]
+    3841 $abc$2447$auto$blifparse.cc:536:parse_blif$2465 (INV.I->O)
+           \x1_d [17]
+    3714 $mul$nr_divider_18bit_pipelined.v:51$6 (DSP48E1.A->P)
+           \stg2_X1 [0]
+     891 $auto$ff.cc:266:slice$1812 (FDCE.CLR->Q)
+           $abc$2447$auto$rtlil.cc:3365:NotGate$2374
+     127 $abc$2447$auto$blifparse.cc:536:parse_blif$2621 (INV.I->O)
+           $techmap2827$abc$2447$auto$blifparse.cc:536:parse_blif$2657.A
+       0 $iopadmap$nr_divider_18bit_pipelined.rst_n (IBUF.I->O)
+       0   \rst_n (<primary input>)
+
+Arrival histogram:
+ legend: * represents 2 endpoint(s)
+         + represents [1,2) endpoint(s)
+(  3720,   3534] |*******************+
+(  3534,   3348] | 
+(  3348,   3162] | 
+(  3162,   2976] | 
+(  2976,   2790] | 
+(  2790,   2604] | 
+(  2604,   2418] | 
+(  2418,   2232] | 
+(  2232,   2046] | 
+(  2046,   1860] | 
+(  1860,   1674] | 
+(  1674,   1488] | 
+(  1488,   1302] | 
+(  1302,   1116] | 
+(  1116,    930] |*+
+(   930,    744] |**************************+
+(   744,    558] | 
+(   558,    372] |************************************************************ 
+(   372,    186] | 
+(   186,      0] |*************+
